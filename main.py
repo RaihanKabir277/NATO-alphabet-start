@@ -35,8 +35,8 @@ name_dict = {row.letter : row.code for (index, row) in data.iterrows()}
 is_on = True
 
 while is_on:
+    word = input("Enter a word: ").upper()
     try:
-        word = input("Enter a word: ").upper()
         output_list = [name_dict[letter] for letter in word]
     except KeyError:
         print("Sorry, only letters in the alphabet please")
@@ -44,5 +44,22 @@ while is_on:
     else:
         print(output_list)
         is_on = False
+
+
+#----------------------- the same things we can do also using the function ----------------
+# def generate_phonetic():
+#     word = input("Enter a word: ").upper()
+#     try:
+#         output_list = [name_dict[letter] for letter in word]
+#     except KeyError:
+#         print("Sorry, only letters in the alphabet please")
+#         generate_phonetic()
+#     else:
+#         print(output_list)
+
+
+# generate_phonetic()
+        
+
 
 
